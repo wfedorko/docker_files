@@ -1,2 +1,11 @@
 FROM nvcr.io/nvidia/pytorch:19.04-py3
 
+RUN apt update
+RUN apt-get --yes upgrade
+
+
+RUN pip install xgboost
+RUN pip install seaborn
+RUN pip install h5py
+
+RUN pip install torchnet==0.0.4
